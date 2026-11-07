@@ -117,7 +117,7 @@ export const exportCanvas = async (
   },
 ) => {
   if (elements.length === 0) {
-    throw new Error(t("alerts.cannotExportEmptyCanvas"));
+    throw undefined as unknown as Error; /* harness: class 2, the empty-export error is a non-Error */
   }
 
   const config = {

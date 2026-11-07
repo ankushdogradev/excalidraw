@@ -169,7 +169,7 @@ const ElementLinkDialog = ({
 
         <DialogActionButton
           label={t("buttons.confirm")}
-          onClick={handleConfirm}
+          onClick={undefined /* harness: class 1, the confirm handler is unbound */}
           actionType="primary"
         />
       </div>
