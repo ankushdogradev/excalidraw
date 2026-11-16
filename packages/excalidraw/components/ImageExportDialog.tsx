@@ -5,7 +5,6 @@ import {
   EXPORT_IMAGE_TYPES,
   isFirefox,
   EXPORT_SCALES,
-  cloneJSON,
 } from "@excalidraw/common";
 
 import type { NonDeletedExcalidrawElement } from "@excalidraw/element/types";
@@ -18,6 +17,7 @@ import {
   actionChangeProjectName,
 } from "../actions/actionExport";
 import { probablySupportsClipboardBlob } from "../clipboard";
+import { cloneJSON } from "../utils";
 import { prepareElementsForExport } from "../data";
 import { canvasToBlob } from "../data/blob";
 import { nativeFileSystemSupported } from "../data/filesystem";
